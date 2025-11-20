@@ -8,26 +8,26 @@ A comprehensive Cypress test automation framework that combines end-to-end UI te
 
 ## 📋 Table of Contents
 
-- [Project Overview](#project-overview)
-- [Technology Stack](#technology-stack)
-- [Project Structure](#project-structure)
-- [Key Features](#key-features)
-- [Prerequisites](#prerequisites)
-- [Installation & Setup](#installation-setup)
-- [Environment Configuration](#environment-configuration)
-- [How to Run Tests](#how-to-run-tests)
-- [Understanding the Framework](#understanding-the-framework)
-- [Project Components Deep Dive](#project-components-deep-dive)
-- [Test Examples & Use Cases](#test-examples-use-cases)
-- [Reusing Components in Other Projects](#reusing-components-in-other-projects)
-- [Reporting](#reporting)
-- [Troubleshooting](#troubleshooting)
-- [Keywords](#keywords)
-- [Conclusion](#conclusion)
+- [Project Overview](#-project-overview)
+- [Technology Stack](#-technology-stack)
+- [Project Structure](#-project-structure)
+- [Key Features](#-key-features)
+- [Prerequisites](#-prerequisites)
+- [Installation & Setup](#-installation--setup)
+- [Environment Configuration](#️-environment-configuration)
+- [How to Run Tests](#-how-to-run-tests)
+- [Understanding the Framework](#-understanding-the-framework)
+- [Project Components Deep Dive](#-project-components-deep-dive)
+- [Test Examples & Use Cases](#-test-examples--use-cases)
+- [Reusing Components in Other Projects](#-reusing-components-in-other-projects)
+- [Reporting](#-reporting)
+- [Troubleshooting](#-troubleshooting)
+- [Keywords](#-keywords)
+- [Conclusion](#-conclusion)
 
 ---
 
-## 🎯 Project Overview {#project-overview}
+## 🎯 Project Overview
 
 This repository is a **comprehensive learning resource** for mastering Cypress—a leading framework for end-to-end (E2E) test automation of modern web applications. It is designed for both beginners and professionals to understand all aspects of UI test automation, including real-world best practices, reusable patterns, modular test design, custom plugins, and integration with popular CI/CD pipelines.
 
@@ -46,7 +46,7 @@ The project demonstrates:
 
 ---
 
-## 🛠 Technology Stack {#technology-stack}
+## 🛠 Technology Stack
 
 ### Core Framework
 
@@ -76,7 +76,7 @@ The project demonstrates:
 
 ---
 
-## 📁 Project Structure {#project-structure}
+## 📁 Project Structure
 
 ```bash
 CypressAutomation/
@@ -121,7 +121,7 @@ CypressAutomation/
 
 ---
 
-## ✨ Key Features {#key-features}
+## ✨ Key Features
 
 ### 1. **Page Object Model (POM) Pattern**
 
@@ -173,7 +173,7 @@ CypressAutomation/
 
 ---
 
-## 📋 Prerequisites {#prerequisites}
+## 📋 Prerequisites
 
 Before you begin, ensure you have the following installed:
 
@@ -202,7 +202,7 @@ Before you begin, ensure you have the following installed:
 
 ---
 
-## 🚀 Installation & Setup {#installation-setup}
+## 🚀 Installation & Setup
 
 ### Step 1: Clone the Repository
 
@@ -246,7 +246,7 @@ You should see: "Verified Cypress!"
 
 ---
 
-## ⚙️ Environment Configuration {#environment-configuration}
+## ⚙️ Environment Configuration
 
 ### Understanding Environment Variables
 
@@ -365,7 +365,7 @@ config.db = {
 
 ---
 
-## 🏃 How to Run Tests {#how-to-run-tests}
+## 🏃 How to Run Tests
 
 ### Open Cypress Test Runner (Interactive GUI)
 
@@ -475,7 +475,7 @@ npx cypress run --env url=https://staging.example.com
 
 ---
 
-## 📚 Understanding the Framework {#understanding-the-framework}
+## 📚 Understanding the Framework
 
 ### What is Cypress?
 
@@ -569,7 +569,7 @@ class HomePage {
 
 ---
 
-## 🔍 Project Components Deep Dive {#project-components-deep-dive}
+## 🔍 Project Components Deep Dive
 
 ### 1. Custom Commands (`cypress/support/commands.js`)
 
@@ -835,7 +835,7 @@ cy.fixture("example").then(function (data) {
 
 ---
 
-## 💡 Test Examples & Use Cases {#test-examples-use-cases}
+## 💡 Test Examples & Use Cases
 
 ### Example 1: Basic UI Test (GreenKart)
 
@@ -1159,7 +1159,7 @@ describe("Iframe Test", () => {
 
 ---
 
-## 🔄 Reusing Components in Other Projects {#reusing-components-in-other-projects}
+## 🔄 Reusing Components in Other Projects
 
 ### 1. Copy Page Object Classes
 
@@ -1241,7 +1241,7 @@ Create a reusable template with:
 
 ---
 
-## 📊 Reporting {#reporting}
+## 📊 Reporting
 
 ### Mochawesome Reports
 
@@ -1318,7 +1318,7 @@ video: true,
 
 ---
 
-## 🔧 Troubleshooting {#troubleshooting}
+## 🔧 Troubleshooting
 
 ### Common Issues & Solutions
 
@@ -1455,7 +1455,7 @@ it("Reads a file using cy.task()", () => {
 
 ---
 
-## 🏷 Keywords {#keywords}
+## 🏷 Keywords
 
 **Testing Frameworks:**
 
@@ -1483,7 +1483,7 @@ it("Reads a file using cy.task()", () => {
 
 ---
 
-## 🎓 Conclusion {#conclusion}
+## 🎓 Conclusion
 
 This Cypress automation project serves as a comprehensive learning resource for mastering end-to-end test automation. It demonstrates:
 
