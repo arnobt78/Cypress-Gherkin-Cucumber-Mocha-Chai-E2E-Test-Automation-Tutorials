@@ -1,6 +1,6 @@
 # Cypress Test Automation Project Tutorials
 
-<img width="1265" alt="Screenshot 2025-02-11 at 02 48 38" src="https://github.com/user-attachments/assets/22e7e0fc-fa11-4c49-bdab-b645b442404b" />
+![Screenshot 2025-02-11 at 02 48 38](https://github.com/user-attachments/assets/22e7e0fc-fa11-4c49-bdab-b645b442404b)
 
 ---
 
@@ -54,7 +54,7 @@ This repository is a comprehensive learning resource for mastering Cypress—a l
 - **Cucumber**: Gherkin-based BDD testing (via cypress-cucumber-preprocessor).
 - **Mochawesome**: For enhanced Mocha test reporting.
 - **Multiple-Cucumber-HTML-Reporter**: For generating beautiful Cucumber reports.
-- **Other Utilities**: 
+- **Other Utilities**:
   - `cypress-iframe` (iframe support)
   - `convert-excel-to-json`, `exceljs` (Excel handling)
   - `neat-csv` (CSV support)
@@ -97,22 +97,28 @@ Cypress--Test-Automation-Project-Tutorials/
 ## Key Components
 
 ### 1. **Fixtures**
+
 Reusable test data in JSON, CSV, or Excel formats. Placed under `cypress/fixtures/`.
 
 ### 2. **Integration Tests**
+
 - **`cypress/integration/examples/`**: General Cypress sample scripts.
 - **`cypress/integration/GreenKart/`**: Domain-specific E2E tests for the GreenKart application.
 
 ### 3. **Plugins**
+
 Custom Node.js tasks (e.g., for database, Excel, or file operations) are registered here. See `cypress/plugins/`.
 
 ### 4. **Support**
+
 Custom commands, global hooks, and shared utilities for DRY test code. See `cypress/support/`.
 
 ### 5. **Reports, Screenshots, Videos**
+
 Auto-generated after test runs, useful for debugging and CI/CD reporting.
 
 ### 6. **Configuration Files**
+
 - `cypress.config.js`: Main Cypress config, including DB and Excel tasks.
 - `package.json`: Scripts, dependencies, and cucumber preprocessor settings.
 
@@ -126,10 +132,11 @@ Auto-generated after test runs, useful for debugging and CI/CD reporting.
 - **Custom Tasks:** Use `cy.task()` to invoke Node context for file/database operations.
 
 **Example: Reading an Excel File**
+
 ```js
-cy.task('excelToJsonConverter', 'cypress/fixtures/data.xlsx').then((data) => {
+cy.task("excelToJsonConverter", "cypress/fixtures/data.xlsx").then((data) => {
   // Use Excel data in your tests
-})
+});
 ```
 
 ---
@@ -137,17 +144,21 @@ cy.task('excelToJsonConverter', 'cypress/fixtures/data.xlsx').then((data) => {
 ## Functionality Walkthrough
 
 1. **Test Data Driven**
+
    - Use JSON/Excel/CSV files from `cypress/fixtures/`.
    - Data accessed via `cy.fixture()` or custom tasks.
 
 2. **E2E Scenarios**
+
    - Tests simulate real user journeys: login, search, add-to-cart, checkout, etc.
    - Modular approach: each test is focused, reusable, and easy to maintain.
 
 3. **Custom Commands**
+
    - Shared actions (e.g., login, form fill) are abstracted into custom commands in `cypress/support/commands.js` (if present).
 
 4. **Database/Excel Tasks**
+
    - Interact with DB or Excel files using `cy.task()` (see `cypress.config.js` for examples).
 
 5. **Reporting**
@@ -166,57 +177,67 @@ cy.task('excelToJsonConverter', 'cypress/fixtures/data.xlsx').then((data) => {
 ### Setup Instructions
 
 1. **Clone the Repository**
-    ```sh
-    git clone <repository-url>
-    cd Cypress--Test-Automation-Project-Tutorials
-    ```
+
+   ```sh
+   git clone <repository-url>
+   cd Cypress--Test-Automation-Project-Tutorials
+   ```
 
 2. **Install Node.js**
-    ```sh
-    nvm install 18
-    nvm use 18
-    ```
+
+   ```sh
+   nvm install 18
+   nvm use 18
+   ```
 
 3. **Install Dependencies**
-    ```sh
-    npm install
-    ```
+
+   ```sh
+   npm install
+   ```
 
 ---
 
 ## How to Run Tests
 
 ### Open Cypress Test Runner (GUI)
+
 ```sh
 npx cypress open
 ```
 
 ### Run All Tests (Headless)
+
 ```sh
 npm run test
 ```
 
 ### Run Tests in Headed Mode
+
 ```sh
 npm run headTest
 ```
 
 ### Run Tests in Chrome Browser
+
 ```sh
 npm run chromeTest
 ```
 
 ### Run with Dashboard Recording
+
 ```sh
 npm run recordDashBoardTest
 ```
 
 ### Run Specific Tests (e.g., Smoke Test)
+
 ```sh
 npm run SmokeTest
 ```
 
 ### Run All GreenKart Tests
+
 ```sh
 npm run GreenKartTest
 ```
@@ -233,6 +254,7 @@ npm run GreenKartTest
 ## Configuration Highlights
 
 ### Cypress Configuration (`cypress.config.js`)
+
 - **Base URL, env, retries, plugins, and custom tasks** are defined here.
 - **Database config** for Azure SQL.
 - **Excel/CSV tasks** for data-driven tests.
@@ -241,6 +263,7 @@ npm run GreenKartTest
 ### `package.json`
 
 **Scripts:**
+
 ```json
 "scripts": {
   "test": "npx cypress run",
@@ -253,6 +276,7 @@ npm run GreenKartTest
 ```
 
 **Dependencies/DevDependencies (Key Packages):**
+
 - `cypress`
 - `@badeball/cypress-cucumber-preprocessor`
 - `cypress-mochawesome-reporter`
@@ -263,6 +287,7 @@ npm run GreenKartTest
 - `neat-csv`
 
 **Cucumber Preprocessor Configuration:**
+
 ```json
 "cypress-cucumber-preprocessor": {
   "json": {
@@ -279,37 +304,43 @@ npm run GreenKartTest
 ### Common Issues & Solutions
 
 1. **Missing Dependencies**
-    - Run: `npm install`
+
+   - Run: `npm install`
 
 2. **Incorrect Node.js Version**
-    - Run: `nvm use 18`
+
+   - Run: `nvm use 18`
 
 3. **Syntax Errors**
-    - Check your test scripts and config files for typos.
+
+   - Check your test scripts and config files for typos.
 
 4. **File Not Found Errors**
-    - Double-check file paths in your configuration and imports.
+
+   - Double-check file paths in your configuration and imports.
 
 5. **"fs" JavaScript File Error on Mac**
-    - Only use Node's `fs` module inside Cypress plugins or support files, not in browser test files.
-    - Use `cy.task()` in your tests to interact with files via Node context.
+   - Only use Node's `fs` module inside Cypress plugins or support files, not in browser test files.
+   - Use `cy.task()` in your tests to interact with files via Node context.
 
 **Example: Using `fs` in plugins**
+
 ```js
-const fs = require('fs');
+const fs = require("fs");
 module.exports = (on, config) => {
-  on('task', {
+  on("task", {
     readFile(filePath) {
-      return fs.readFileSync(filePath, 'utf8');
+      return fs.readFileSync(filePath, "utf8");
     },
   });
 };
 ```
 
 **Example: Using `cy.task()` in tests**
+
 ```js
-it('Reads a file using cy.task()', () => {
-  cy.task('readFile', 'cypress/fixtures/sample.json').then((content) => {
+it("Reads a file using cy.task()", () => {
+  cy.task("readFile", "cypress/fixtures/sample.json").then((content) => {
     cy.log(content);
   });
 });

@@ -27,6 +27,7 @@
 
 # misc
 .DS_Store
+**/.DS_Store
 *.pem
 
 # debug
@@ -52,5 +53,3 @@ next-env.d.ts
 .vscode
 /src/generated/prisma
 tsconfig.tsbuildinfo
-
-.DS_Store
